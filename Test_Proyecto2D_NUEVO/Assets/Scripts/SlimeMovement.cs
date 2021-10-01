@@ -28,11 +28,9 @@ public class SlimeMovement : MonoBehaviour {
 
     private bool isGrounded()
     {
-        float extraHeightText = 0.1f;
+        float extraHeightText = .1f;
         RaycastHit2D raycastHit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeightText, groundLayerMask);
-
-        //Debug.DrawRay(bc2d.bounds.center, Vector2.down *)
-
+               
         return raycastHit.collider != null;
     }
 }
