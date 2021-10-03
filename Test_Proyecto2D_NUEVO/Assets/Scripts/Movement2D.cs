@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Movement2D : MonoBehaviour {
 
+    [SerializeField] private LayerMask groundLayerMask;
+
     public float moveSpeed;
     public float jumpHeight;
 
     Vector3 startPos;
 
-    public bool isGrounded = false;
     private Animator animator;
 
     public bool isDashing = false;
@@ -19,20 +20,22 @@ public class Movement2D : MonoBehaviour {
     public float dashCooldownTimer;
     public float startDashTimer;
     public float dashCooldown;
-    public float dashDirection;
+    private float dashDirection;
     public float dashForce;
 
     Quaternion defaultRot;
         
     Rigidbody2D rb2d;
+    BoxCollider2D bc2d;
 
     void Start() {
         rb2d = GetComponent<Rigidbody2D>();
+        bc2d = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+
         defaultRot = transform.rotation;
         startPos = transform.position;
-    }
-
+    }   
 
     void Update() {
 
@@ -40,7 +43,7 @@ public class Movement2D : MonoBehaviour {
         if (transform.rotation != defaultRot)
             transform.rotation = defaultRot;
 
-        if (Input.GetButtonDown("Jump") && isGrounded == true)
+        if (Input.GetButtonDown("Jump") && isGrounded() == true)
             Jump();
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && moveSpeed != 0 && dashCooldownTimer <= 0)
@@ -129,5 +132,13 @@ public class Movement2D : MonoBehaviour {
         if (collision.collider.tag == "EnemyHead")
             Jump();
              
+    }
+
+    private bool isGrounded()
+    {
+        float extraHeightText = .1f;
+        RaycastHit2D raycastHit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeightText, groundLayerMask);
+
+        return raycastHit.collider != null;
     }
 }
