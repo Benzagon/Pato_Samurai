@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement2D : MonoBehaviour {
 
     [SerializeField] private LayerMask groundLayerMask;
+    [SerializeField] private LayerMask slimeLayerMask;
 
     public float moveSpeed;
     public float jumpHeight;
@@ -98,6 +99,11 @@ public class Movement2D : MonoBehaviour {
             dashCooldownTimer -= Time.deltaTime;
             rb2d.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         }
+
+        if(jumpOnEnemy())
+        {
+            Jump();
+        }
             
     }
 
@@ -122,15 +128,15 @@ public class Movement2D : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "Respawn"|| collision.collider.tag == "Enemy")
-        {
-            //Time.timeScale = .5f;
-            transform.position = startPos;
-            animator.SetBool("walking", false);
-        }
+        //if(collision.collider.tag == "Respawn"|| collision.collider.tag == "Enemy")
+        //{
+        //    //Time.timeScale = .5f;
+        //    transform.position = startPos;
+        //    animator.SetBool("walking", false);
+        //}
 
-        if (collision.collider.tag == "EnemyHead")
-            Jump();
+        //if (collision.collider.tag == "EnemyHead")
+        //    Jump();
              
     }
 
@@ -138,6 +144,14 @@ public class Movement2D : MonoBehaviour {
     {
         float extraHeightText = .1f;
         RaycastHit2D raycastHit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeightText, groundLayerMask);
+
+        return raycastHit.collider != null;
+    }
+
+    private bool jumpOnEnemy()
+    {
+        float extraHeightText = .1f;
+        RaycastHit2D raycastHit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeightText, slimeLayerMask);
 
         return raycastHit.collider != null;
     }
