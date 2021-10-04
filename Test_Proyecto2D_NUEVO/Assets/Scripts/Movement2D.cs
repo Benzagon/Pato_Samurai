@@ -130,7 +130,7 @@ public class Movement2D : MonoBehaviour {
     {
         //if(collision.collider.tag == "Respawn"|| collision.collider.tag == "Enemy")
         //{
-        //    //Time.timeScale = .5f;
+        //    Time.timeScale = .5f;
         //    transform.position = startPos;
         //    animator.SetBool("walking", false);
         //}
