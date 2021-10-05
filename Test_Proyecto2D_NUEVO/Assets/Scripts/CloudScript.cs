@@ -26,7 +26,7 @@ public class CloudScript : MonoBehaviour {
     {
         if(Input.GetKeyUp(KeyCode.S))
         {
-            waitTime = 0.5f;
+            waitTime = 0.3f;
         }
 
 	    if(Input.GetKey(KeyCode.S))
@@ -47,24 +47,24 @@ public class CloudScript : MonoBehaviour {
             effector.rotationalOffset = 0f;
         }
 
-        if (isBeingStoodOn())
-        {
-            spriteRenderer.sprite = smallCloud;
-        }
+        //if (isBeingStoodOn())
+        //{
+        //    spriteRenderer.sprite = smallCloud;
+        //}
 
-        else
-        {
-            spriteRenderer.sprite = fullCloud;
-        }
+        //else
+        //{
+        //    spriteRenderer.sprite = fullCloud;
+        //}
     }
 
-    private bool isBeingStoodOn()
-    {
-        float extraHeightText = 1f;
-        RaycastHit2D raycastHit = Physics2D.Raycast(bc2d.bounds.center, Vector2.up, bc2d.bounds.extents.y + extraHeightText, playerLayerMask);
+    //private bool isBeingStoodOn()
+    //{
+    //    float extraHeightText = 1f;
+    //    RaycastHit2D raycastHit = Physics2D.Raycast(bc2d.bounds.center, Vector2.up, bc2d.bounds.extents.y + extraHeightText, playerLayerMask);
 
-        return raycastHit.collider != null;
-    }
+    //    return raycastHit.collider != null;
+    //}
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
     //    if (collision.collider.tag == "Player")

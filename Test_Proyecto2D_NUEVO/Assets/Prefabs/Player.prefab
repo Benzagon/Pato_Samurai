@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114162878672633232}
   - component: {fileID: 50827185000973704}
   - component: {fileID: 95522667143774090}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4240387144764946}
   - component: {fileID: 20225376935704524}
   - component: {fileID: 81107698485274094}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1407093938005862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.6, y: 4.61, z: 0}
+  m_LocalPosition: {x: -14.33, y: 0.26, z: 0}
   m_LocalScale: {x: 3.75, y: 3.75, z: 3.75}
   m_Children:
   - {fileID: 4240387144764946}
@@ -69,8 +69,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1698102262875018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -16}
-  m_LocalScale: {x: 1.5000002, y: 1.5000002, z: 1.5000002}
+  m_LocalPosition: {x: 0, y: 0.24266668, z: -16}
+  m_LocalScale: {x: 1.5000005, y: 1.5000002, z: 1.5000005}
   m_Children: []
   m_Father: {fileID: 4207897774936040}
   m_RootOrder: 0
@@ -99,7 +99,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.891434
+  orthographic size: 6.3388286
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -199,6 +199,9 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  slimeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   moveSpeed: 7.5
   jumpHeight: 19
   isDashing: 0
@@ -206,6 +209,9 @@ MonoBehaviour:
   startDashTimer: 0.2
   dashCooldown: 1
   dashForce: 3
+  DashKey: 304
+  walkLKey: 97
+  walkRKey: 100
 --- !u!212 &212424399100934076
 SpriteRenderer:
   m_ObjectHideFlags: 1

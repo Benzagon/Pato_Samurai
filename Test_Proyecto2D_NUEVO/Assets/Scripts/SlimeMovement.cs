@@ -12,6 +12,7 @@ public class SlimeMovement : MonoBehaviour {
 
     private float jumpCooldown;
     public float cooldownSeconds;
+    public int health;
 
     private Animator animator;
 
@@ -47,6 +48,11 @@ public class SlimeMovement : MonoBehaviour {
             rb2d.velocity = new Vector2(0.0f, 0.0f);
             animator.SetBool("jumping", false);
         }
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private bool isGrounded()
@@ -64,5 +70,10 @@ public class SlimeMovement : MonoBehaviour {
             slimeMoveSpeed = -slimeMoveSpeed;
             slimeScaleX = -slimeScaleX;
         }
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        Debug.Log("DamageTAKEN !");
     }
 }

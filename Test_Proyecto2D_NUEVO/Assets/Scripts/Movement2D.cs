@@ -23,7 +23,7 @@ public class Movement2D : MonoBehaviour {
     public float dashCooldown;
     private float dashDirection;
     public float dashForce;
-
+     
     Quaternion defaultRot;
         
     Rigidbody2D rb2d;
@@ -128,16 +128,16 @@ public class Movement2D : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if(collision.collider.tag == "Respawn"|| collision.collider.tag == "Enemy")
-        //{
-        //    Time.timeScale = .5f;
-        //    transform.position = startPos;
-        //    animator.SetBool("walking", false);
-        //}
+        if (collision.collider.tag == "Respawn" || collision.collider.tag == "Enemy")
+        {
+            //Time.timeScale = .5f;
+            transform.position = startPos;
+            animator.SetBool("walking", false);
+        }
 
-        //if (collision.collider.tag == "EnemyHead")
-        //    Jump();
-             
+        if (collision.collider.tag == "EnemyHead")
+            Jump();
+
     }
 
     private bool isGrounded()
