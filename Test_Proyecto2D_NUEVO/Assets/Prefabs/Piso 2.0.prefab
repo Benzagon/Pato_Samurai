@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4824148841576318}
   - component: {fileID: 212981722623610164}
-  m_Layer: 0
+  - component: {fileID: 61894977020658128}
+  m_Layer: 8
   m_Name: Piso 2.0
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,12 +35,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1622129438152392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.588, y: -4.6, z: 0}
-  m_LocalScale: {x: 1.5, y: 5, z: 5}
+  m_LocalPosition: {x: 53.26, y: -0.59, z: 0}
+  m_LocalScale: {x: 25, y: 1.25, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61894977020658128
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1622129438152392}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 7d24ec16cabd87e47b089c9a0f450176, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.023960665}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.5920787}
+  m_EdgeRadius: 0
 --- !u!212 &212981722623610164
 SpriteRenderer:
   m_ObjectHideFlags: 1
