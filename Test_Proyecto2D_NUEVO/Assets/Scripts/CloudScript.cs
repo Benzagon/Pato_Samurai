@@ -9,16 +9,16 @@ public class CloudScript : MonoBehaviour {
     private PlatformEffector2D effector;
     private float waitTime;
 
-    public SpriteRenderer spriteRenderer;
-    public Sprite smallCloud;
-    public Sprite fullCloud;
+    //public SpriteRenderer spriteRenderer;
+    //public Sprite smallCloud;
+    //public Sprite fullCloud;
 
     BoxCollider2D bc2d;
 
 	void Start () {
         effector = GetComponent<PlatformEffector2D>();
 
-        bc2d = GetComponent<BoxCollider2D>();
+        //bc2d = GetComponent<BoxCollider2D>();
 	}
 	
 	

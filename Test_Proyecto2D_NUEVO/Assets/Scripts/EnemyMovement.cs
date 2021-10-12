@@ -10,10 +10,12 @@ public class EnemyMovement : MonoBehaviour {
     private bool moveLeft = true;
 
     Rigidbody2D rb2d;
+    Transform trans;
 
-	void Start ()
+    void Start ()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        trans = GetComponent<Transform>();
 	}
         
 	void Update ()

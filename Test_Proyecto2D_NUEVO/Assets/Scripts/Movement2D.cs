@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement2D : MonoBehaviour {
 
@@ -23,7 +24,9 @@ public class Movement2D : MonoBehaviour {
     public float dashCooldown;
     private float dashDirection;
     public float dashForce;
-     
+
+    public Slider dashCooldownSlider;
+
     Quaternion defaultRot;
         
     Rigidbody2D rb2d;
@@ -36,6 +39,8 @@ public class Movement2D : MonoBehaviour {
 
         defaultRot = transform.rotation;
         startPos = transform.position;
+
+        dashCooldownSlider.value = 0f;
     }   
 
     void Update() {
@@ -94,10 +99,12 @@ public class Movement2D : MonoBehaviour {
             }
         }
 
-        if(!isDashing)
+        if (!isDashing)
         {
             dashCooldownTimer -= Time.deltaTime;
             rb2d.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+
+            dashCooldownSlider.value = dashCooldownTimer;
         }
 
         if(jumpOnEnemy())
@@ -127,6 +134,8 @@ public class Movement2D : MonoBehaviour {
         if (isFacingRight == false)
             dashDirection = -moveSpeed;
     }
+
+    //dashCooldownSlider.value = currentDashTimer / dashCooldown;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
