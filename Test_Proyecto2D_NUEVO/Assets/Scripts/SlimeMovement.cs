@@ -13,6 +13,9 @@ public class SlimeMovement : MonoBehaviour {
     private float jumpCooldown;
     public float cooldownSeconds;
     public int health;
+    public int numOfJumps;
+
+    private int slimeJumpCount = 0;
 
     private Animator animator;
 
@@ -34,13 +37,21 @@ public class SlimeMovement : MonoBehaviour {
         
         if (isGrounded() && jumpCooldown <= Time.time)
         {
+            if (slimeJumpCount >= numOfJumps)
+            {
+                turnAround();
+                slimeJumpCount = 0;
+            }
+
             rb2d.velocity = Vector2.up * slimeJumpHeight;
             rb2d.velocity = new Vector2(slimeMoveSpeed, rb2d.velocity.y);
-            transform.localScale = new Vector3(slimeScaleX, 4.5f, 4.5f);
+            transform.localScale = new Vector3(slimeScaleX, 4f, 4.5f);
 
             animator.SetBool("jumping", true);
 
             jumpCooldown = Time.time + cooldownSeconds;
+
+            slimeJumpCount += 1;
         }
         
         else if(isGrounded() && jumpCooldown >= Time.time)
@@ -62,18 +73,24 @@ public class SlimeMovement : MonoBehaviour {
                
         return raycastHit.collider != null;
     }
+        
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
+
+    private void turnAround()
+    {
+        slimeMoveSpeed = -slimeMoveSpeed;
+        slimeScaleX = -slimeScaleX;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Wall" || collision.collider.tag == "Enemy")
         {
-            slimeMoveSpeed = -slimeMoveSpeed;
-            slimeScaleX = -slimeScaleX;
+            turnAround();
         }
     }
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        Debug.Log("DamageTAKEN !");
-    }
 }
+

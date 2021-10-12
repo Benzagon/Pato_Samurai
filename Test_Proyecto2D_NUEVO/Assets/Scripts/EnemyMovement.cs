@@ -21,19 +21,19 @@ public class EnemyMovement : MonoBehaviour {
         if (moveLeft == true)
         {
             rb2d.velocity = new Vector2(-enemyMoveSpeed, rb2d.velocity.y);
-            transform.localScale = new Vector3(1.5f, 4.5f, 4.5f);
+            transform.localScale = new Vector3(4f, 4f, 4.5f);
         }
 
         else if (moveLeft == false)
         {
             rb2d.velocity = new Vector2(enemyMoveSpeed, rb2d.velocity.y);
-            transform.localScale = new Vector3(-1.5f, 4.5f, 4.5f);
+            transform.localScale = new Vector3(-4f, 4f, 4.5f);
         }
     }
        
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "Wall" || collision.collider.tag ==  "Enemy" || collision.collider.tag == "Platform")
+        if(collision.collider.tag == "Wall" || collision.collider.tag ==  "Enemy" || collision.collider.tag == "Platform" || collision.collider.tag == "Respawn")
         {
             moveLeft = !moveLeft;
         }

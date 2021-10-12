@@ -44,7 +44,7 @@ public class Movement2D : MonoBehaviour {
         if (transform.rotation != defaultRot)
             transform.rotation = defaultRot;
 
-        if (Input.GetButtonDown("Jump") && isGrounded() == true)
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && isGrounded() == true)
             Jump();
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && moveSpeed != 0 && dashCooldownTimer <= 0)
@@ -118,6 +118,8 @@ public class Movement2D : MonoBehaviour {
          currentDashTimer = startDashTimer;
          dashCooldownTimer = dashCooldown;
          rb2d.velocity = Vector2.zero;
+
+        animator.SetTrigger("dash");
 
         if(isFacingRight == true)
             dashDirection = moveSpeed;

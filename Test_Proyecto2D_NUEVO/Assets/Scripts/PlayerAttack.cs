@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour {
 		
         if(timeBtwAttack <= 0)
         {
-            if(Input.GetKey(KeyCode.Space))
+            if(Input.GetKey(KeyCode.Mouse0))
             {
                 //camAnim.SetTrigger("shake");
                 playerAnim.SetTrigger("attack");
