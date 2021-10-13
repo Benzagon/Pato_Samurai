@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50992139815959658}
   - component: {fileID: 114746268193171610}
   - component: {fileID: 95678900586344336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4279039599130796}
   - component: {fileID: 61462845888795016}
   - component: {fileID: 114207662878179922}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: JumpOnHead
   m_TagString: EnemyHead
   m_Icon: {fileID: 0}
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMoveSpeed: 3
+  health: 1
 --- !u!212 &212011915526670610
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -218,8 +219,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1642666661
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 550aeddba1e44d548a81d032b35cf182, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

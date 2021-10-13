@@ -8,12 +8,12 @@ public class CloudScript : MonoBehaviour {
 
     private PlatformEffector2D effector;
     private float waitTime;
-
+  
     //public SpriteRenderer spriteRenderer;
     //public Sprite smallCloud;
     //public Sprite fullCloud;
 
-    BoxCollider2D bc2d;
+    //BoxCollider2D bc2d;
 
 	void Start () {
         effector = GetComponent<PlatformEffector2D>();
@@ -26,7 +26,7 @@ public class CloudScript : MonoBehaviour {
     {
         if(Input.GetKeyUp(KeyCode.S))
         {
-            waitTime = 0.3f;
+            waitTime = 0.5f;
         }
 
 	    if(Input.GetKey(KeyCode.S))
@@ -35,6 +35,7 @@ public class CloudScript : MonoBehaviour {
             {
                 effector.rotationalOffset = 180f;
                 waitTime = 0.5f;
+                
             }
             else
             {

@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1405369852170846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.029998, y: -0.16000019, z: 0}
+  m_LocalPosition: {x: 127.38, y: -4.26, z: 0}
   m_LocalScale: {x: 2.75, y: 1, z: 1.0671}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,11 +51,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 1405369852170846}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7d24ec16cabd87e47b089c9a0f450176, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000044703484, y: -0.041194446}
+  m_Offset: {x: 0.005480841, y: -0.041194446}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -66,7 +66,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43897828, y: 0.12362374}
+  m_Size: {x: 0.53759205, y: 0.12362374}
   m_EdgeRadius: 0
 --- !u!114 &114456632481676268
 MonoBehaviour:
@@ -82,9 +82,6 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  spriteRenderer: {fileID: 212051899000032626}
-  smallCloud: {fileID: 21300002, guid: 1f60a737fdd76aa4fb90ba05bf6c71af, type: 3}
-  fullCloud: {fileID: 21300000, guid: 1f60a737fdd76aa4fb90ba05bf6c71af, type: 3}
 --- !u!212 &212051899000032626
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -15,6 +15,8 @@ public class SlimeMovement : MonoBehaviour {
     public int health;
     public int numOfJumps;
 
+    private float waitTime;
+
     private int slimeJumpCount = 0;
 
     private Animator animator;
@@ -60,9 +62,19 @@ public class SlimeMovement : MonoBehaviour {
             animator.SetBool("jumping", false);
         }
 
-        if(health <= 0)
+        if(health == 0)
         {
-            Destroy(gameObject);
+            rb2d.velocity = new Vector2(0.0f, 0.0f);
+            if (waitTime <= 0)
+            {
+                Destroy(gameObject);
+                health--;
+                waitTime = 0.5f;
+            }
+            else
+            {
+                waitTime -= Time.deltaTime;
+            }
         }
     }
 
@@ -76,6 +88,7 @@ public class SlimeMovement : MonoBehaviour {
         
     public void TakeDamage(int damage)
     {
+        waitTime = 0.5f;
         health -= damage;
     }
 

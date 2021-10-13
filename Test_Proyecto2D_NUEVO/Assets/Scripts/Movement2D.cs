@@ -118,10 +118,10 @@ public class Movement2D : MonoBehaviour {
             }
         }
 
-        if(jumpOnEnemy())
-        {
-            Jump();
-        }
+        //if(jumpOnEnemy())
+        //{
+        //    Jump();
+        //}
             
     }
 
@@ -168,11 +168,11 @@ public class Movement2D : MonoBehaviour {
         return raycastHit.collider != null;
     }
 
-    private bool jumpOnEnemy()
-    {
-        float extraHeightText = .1f;
-        RaycastHit2D raycastHit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeightText, slimeLayerMask);
+    //private bool jumpOnEnemy()
+    //{
+    //    float extraHeightText = .1f;
+    //    RaycastHit2D raycastHit = Physics2D.Raycast(bc2d.bounds.center, Vector2.down, bc2d.bounds.extents.y + extraHeightText, slimeLayerMask);
 
-        return raycastHit.collider != null;
-    }
+    //    return raycastHit.collider != null;
+    //}
 }

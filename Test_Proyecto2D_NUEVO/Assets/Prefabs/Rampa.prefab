@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 68760084881332430}
   m_Layer: 8
   m_Name: Rampa
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,13 +34,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1596078241196808}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 197.87634, y: -0.5966542, z: 0}
-  m_LocalScale: {x: 26.925987, y: 1.2824249, z: 4.9022923}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 646.04, y: -0.595, z: 0}
+  m_LocalScale: {x: 25, y: 1.335146, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!68 &68760084881332430
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -91,8 +91,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 952136057
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 867b71b5758e7d34abe36a1ddded2390, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

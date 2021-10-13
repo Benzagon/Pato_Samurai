@@ -43,6 +43,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Player
+    uniqueID: 3320902455
+    locked: 0
+  - name: Enemy
+    uniqueID: 1642666661
+    locked: 0
+  - name: Spike
+    uniqueID: 3718193569
+    locked: 0
+  - name: Interfloor
+    uniqueID: 499692661
+    locked: 0
+  - name: Ground
+    uniqueID: 952136057
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

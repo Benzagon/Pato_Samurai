@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1407093938005862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.89, y: 0.92, z: 0}
+  m_LocalPosition: {x: 213.4, y: 5.4, z: 0}
   m_LocalScale: {x: 3.75, y: 3.75, z: 3.75}
   m_Children:
   - {fileID: 4240387144764946}
@@ -239,6 +239,8 @@ MonoBehaviour:
   startDashTimer: 0.2
   dashCooldown: 1
   dashForce: 3
+  dashCooldownSlider: {fileID: 0}
+  dashCooldownBorder: {fileID: 0}
 --- !u!114 &114797894872521210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,10 +256,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   timeBtwAttack: 0
-  startTimeBtwAttack: 1
+  startTimeBtwAttack: 0.5
   playerAnim: {fileID: 95522667143774090}
   attackPos: {fileID: 4475855489168264}
-  attackRange: 0.58
+  attackRange: 1.1
   damage: 1
 --- !u!212 &212424399100934076
 SpriteRenderer:
@@ -291,8 +293,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -974064841
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4cf427580554ba0418c5ef20adcabc3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
