@@ -26,6 +26,7 @@ public class Movement2D : MonoBehaviour {
     public float dashForce;
 
     public Slider dashCooldownSlider;
+    public Image dashCooldownBorder;
 
     Quaternion defaultRot;
         
@@ -105,6 +106,16 @@ public class Movement2D : MonoBehaviour {
             rb2d.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
             dashCooldownSlider.value = dashCooldownTimer;
+
+            if(dashCooldownSlider.value <= 0.05)
+            {
+                dashCooldownBorder.enabled = false;
+            }
+
+            else
+            {
+                dashCooldownBorder.enabled = true;
+            }
         }
 
         if(jumpOnEnemy())
@@ -134,9 +145,7 @@ public class Movement2D : MonoBehaviour {
         if (isFacingRight == false)
             dashDirection = -moveSpeed;
     }
-
-    //dashCooldownSlider.value = currentDashTimer / dashCooldown;
-
+       
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Respawn" || collision.collider.tag == "Enemy")
