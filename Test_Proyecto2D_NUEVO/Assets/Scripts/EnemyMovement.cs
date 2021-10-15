@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour {
     public int health;
     private float waitTime;
 
+    //public ParticleSystem PS;
+
     private bool moveLeft = true;
 
     Rigidbody2D rb2d;
@@ -18,6 +20,7 @@ public class EnemyMovement : MonoBehaviour {
     {
         rb2d = GetComponent<Rigidbody2D>();
         trans = GetComponent<Transform>();
+        //PS.play();
 	}
         
 	void Update ()
