@@ -27,6 +27,7 @@ public class Movement2D : MonoBehaviour {
 
     public Slider dashCooldownSlider;
     public Image dashCooldownBorder;
+    public Image dashCooldownBackground;
 
     Quaternion defaultRot;
         
@@ -110,11 +111,13 @@ public class Movement2D : MonoBehaviour {
             if(dashCooldownSlider.value <= 0.05)
             {
                 dashCooldownBorder.enabled = false;
+                dashCooldownBackground.enabled = false;
             }
 
             else
             {
                 dashCooldownBorder.enabled = true;
+                dashCooldownBackground.enabled = true;
             }
         }
 
