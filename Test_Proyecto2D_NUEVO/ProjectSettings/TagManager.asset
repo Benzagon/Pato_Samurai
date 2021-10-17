@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - EnemyHead
   - Platform
+  - CP
   layers:
   - Default
   - TransparentFX

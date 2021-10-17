@@ -14,12 +14,12 @@ public class EnemyMovement : MonoBehaviour {
     private bool moveLeft = true;
 
     Rigidbody2D rb2d;
-    Transform trans;
+   //Transform trans;
 
     void Start ()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        trans = GetComponent<Transform>();
+        //trans = GetComponent<Transform>();
         //PS.play();
 	}
         

@@ -10,11 +10,12 @@ public class Movement2D : MonoBehaviour {
 
     public float moveSpeed;
     public float jumpHeight;
+    public int health;
 
     Vector3 startPos;
 
     private Animator animator;
-
+    
     public bool isDashing = false;
     private bool isFacingRight = true;
     private float currentDashTimer;
@@ -38,7 +39,7 @@ public class Movement2D : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         bc2d = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-
+        
         defaultRot = transform.rotation;
         startPos = transform.position;
 
@@ -154,13 +155,20 @@ public class Movement2D : MonoBehaviour {
         if (collision.collider.tag == "Respawn" || collision.collider.tag == "Enemy")
         {
             //Time.timeScale = .5f;
+            health--;
             transform.position = startPos;
             animator.SetBool("walking", false);
         }
 
-        if (collision.collider.tag == "EnemyHead")
+        else if (collision.collider.tag == "EnemyHead")
+        {
             Jump();
+        }
 
+        else if(collision.collider.tag == ("CP"))
+        {
+            startPos = GetComponent<CPScript>().Start(CPLocation);
+        }
     }
 
     private bool isGrounded()
