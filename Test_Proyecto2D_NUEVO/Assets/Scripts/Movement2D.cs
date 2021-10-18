@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Movement2D : MonoBehaviour {
 
@@ -15,6 +16,7 @@ public class Movement2D : MonoBehaviour {
     Vector3 startPos;
 
     private Animator animator;
+    public Animator UIAnimator;
     
     public bool isDashing = false;
     private bool isFacingRight = true;
@@ -30,6 +32,8 @@ public class Movement2D : MonoBehaviour {
     public Image dashCooldownBorder;
     public Image dashCooldownBackground;
 
+    public Image youDiedText;
+
     Quaternion defaultRot;
         
     Rigidbody2D rb2d;
@@ -44,6 +48,8 @@ public class Movement2D : MonoBehaviour {
         startPos = transform.position;
 
         dashCooldownSlider.value = 0f;
+
+        youDiedText.enabled = false;
     }   
 
     void Update() {
@@ -153,22 +159,35 @@ public class Movement2D : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Respawn" || collision.collider.tag == "Enemy")
-        {
-            //Time.timeScale = .5f;
+        {            
             health--;
-            transform.position = startPos;
-            animator.SetBool("walking", false);
+
+            if(health <= 0)
+            {
+                //Time.timeScale = .5f;
+                //SceneManager.LoadScene("Level 1");
+
+                youDiedText.enabled = true;
+
+                UIAnimator.SetBool("Death", true);
+            }
+            else
+            {
+                transform.position = startPos;
+                animator.SetBool("walking", false);
+            }
         }
 
         else if (collision.collider.tag == "EnemyHead")
         {
             Jump();
         }
+    }
 
-        else if(collision.collider.tag == ("CP"))
-        {
-            startPos = GetComponent<CPScript>().Start(CPLocation);
-        }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(startPos != transform.position)
+            startPos = transform.position;
     }
 
     private bool isGrounded()
