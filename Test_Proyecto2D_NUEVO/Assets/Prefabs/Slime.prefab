@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1036837451547336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 138.47, y: -0.34, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 3.6362302}
+  m_LocalPosition: {x: 23.1, y: 1.4, z: 0}
+  m_LocalScale: {x: 4, y: 3.9999998, z: 3.63623}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   cooldownSeconds: 2.75
   health: 1
   numOfJumps: 5
+  PSDie: {fileID: 198269544676103810, guid: cd0a5ce7b7291b94ebdd26aa1e648703, type: 2}
 --- !u!212 &212491516397633250
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -17,6 +17,7 @@ public class Movement2D : MonoBehaviour {
 
     private Animator animator;
     public Animator UIAnimator;
+    public Animator CPAnimator;
     
     public bool isDashing = false;
     private bool isFacingRight = true;
@@ -30,9 +31,7 @@ public class Movement2D : MonoBehaviour {
 
     public Slider dashCooldownSlider;
     public Image dashCooldownBorder;
-    public Image dashCooldownBackground;
-
-    public Image youDiedText;
+    public Image dashCooldownBackground;  
 
     Quaternion defaultRot;
         
@@ -48,8 +47,7 @@ public class Movement2D : MonoBehaviour {
         startPos = transform.position;
 
         dashCooldownSlider.value = 0f;
-
-        youDiedText.enabled = false;
+               
     }   
 
     void Update() {
@@ -128,11 +126,12 @@ public class Movement2D : MonoBehaviour {
             }
         }
 
-        //if(jumpOnEnemy())
-        //{
-        //    Jump();
-        //}
-            
+       if(isGrounded() == true)
+            animator.SetBool("isGrounded", true);
+
+       else
+            animator.SetBool("isGrounded", false);
+
     }
 
     void Jump()
@@ -162,14 +161,11 @@ public class Movement2D : MonoBehaviour {
         {            
             health--;
 
-            if(health <= 0)
+            if (health <= 0)
             {
                 //Time.timeScale = .5f;
-                //SceneManager.LoadScene("Level 1");
-
-                youDiedText.enabled = true;
-
-                UIAnimator.SetBool("Death", true);
+                SceneManager.LoadScene("DeathScreen");
+                                
             }
             else
             {
@@ -186,8 +182,13 @@ public class Movement2D : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(startPos != transform.position)
+        bool cpIsActive = false;
+
+        if (cpIsActive == false)
+        {
             startPos = transform.position;
+            CPAnimator.SetTrigger("getCP");
+        }
     }
 
     private bool isGrounded()

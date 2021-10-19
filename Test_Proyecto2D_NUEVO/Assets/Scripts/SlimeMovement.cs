@@ -21,6 +21,7 @@ public class SlimeMovement : MonoBehaviour {
 
     private Animator animator;
 
+    public ParticleSystem PSDie;
     Rigidbody2D rb2d;
     BoxCollider2D bc2d;
     Transform trans;
@@ -33,6 +34,7 @@ public class SlimeMovement : MonoBehaviour {
 
         slimeMoveSpeed = -slimeMoveSpeed;
         slimeScaleX = trans.localScale.x;
+        
     }
 		
 	void Update () {      
@@ -62,14 +64,14 @@ public class SlimeMovement : MonoBehaviour {
             animator.SetBool("jumping", false);
         }
 
-        if(health == 0)
+        if(health <= 0)
         {
             rb2d.velocity = new Vector2(0.0f, 0.0f);
             if (waitTime <= 0)
             {
                 Destroy(gameObject);
                 health--;
-                waitTime = 0.5f;
+                waitTime = 0.25f;
             }
             else
             {
@@ -88,7 +90,7 @@ public class SlimeMovement : MonoBehaviour {
         
     public void TakeDamage(int damage)
     {
-        waitTime = 0.5f;
+        waitTime = 0.25f;
         health -= damage;
     }
 
@@ -96,6 +98,10 @@ public class SlimeMovement : MonoBehaviour {
     {
         slimeMoveSpeed = -slimeMoveSpeed;
         slimeScaleX = -slimeScaleX;
+    }
+    private void OnDestroy()
+    {
+        Instantiate(PSDie, transform.position, Quaternion.identity);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

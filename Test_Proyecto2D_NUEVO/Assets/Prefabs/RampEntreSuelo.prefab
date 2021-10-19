@@ -9,62 +9,43 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1596078241196808}
+  m_RootGameObject: {fileID: 1165385543597548}
   m_IsPrefabAsset: 1
---- !u!1 &1596078241196808
+--- !u!1 &1165385543597548
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4672933998014936}
-  - component: {fileID: 212981045118738264}
-  - component: {fileID: 68760084881332430}
-  m_Layer: 8
-  m_Name: Rampa
-  m_TagString: Ground
+  - component: {fileID: 4597193105204478}
+  - component: {fileID: 212734423200691496}
+  m_Layer: 0
+  m_Name: RampEntreSuelo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4672933998014936
+--- !u!4 &4597193105204478
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596078241196808}
+  m_GameObject: {fileID: 1165385543597548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 203.2, y: -0.119, z: 0}
-  m_LocalScale: {x: 25, y: 1.25, z: 5}
+  m_LocalPosition: {x: 196.9, y: -1.378, z: 0}
+  m_LocalScale: {x: 25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!68 &68760084881332430
-EdgeCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596078241196808}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 7d24ec16cabd87e47b089c9a0f450176, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.33308575, y: 0.2125523}
-  - {x: 0.2519864, y: -0.32786983}
-  - {x: 0.2676981, y: -0.33809188}
---- !u!212 &212981045118738264
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &212734423200691496
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596078241196808}
+  m_GameObject: {fileID: 1165385543597548}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,7 +55,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 60864dbcc9327a941a89ddea49660c8b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,10 +72,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 952136057
-  m_SortingLayer: -1
+  m_SortingLayerID: 499692661
+  m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a2c190b29e529f34e818f2bed96893e3, type: 3}
+  m_Sprite: {fileID: 21300006, guid: a2c190b29e529f34e818f2bed96893e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
