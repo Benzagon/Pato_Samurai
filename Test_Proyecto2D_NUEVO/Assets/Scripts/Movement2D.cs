@@ -16,7 +16,6 @@ public class Movement2D : MonoBehaviour {
     Vector3 startPos;
 
     private Animator animator;
-    public Animator UIAnimator;
     public Animator CPAnimator;
     
     public bool isDashing = false;
