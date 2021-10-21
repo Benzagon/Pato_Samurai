@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMoveSpeed: 3
   health: 1
+  PSDie: {fileID: 198269544676103810, guid: 975cc700b12ff7842be18fbac453bdf8, type: 2}
 --- !u!212 &212011915526670610
 SpriteRenderer:
   m_ObjectHideFlags: 1
