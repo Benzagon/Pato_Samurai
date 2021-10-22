@@ -927,7 +927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -552, y: 253.7}
+  m_AnchoredPosition: {x: -638, y: 282}
   m_SizeDelta: {x: 213.1, y: 106.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1263825242
@@ -1221,7 +1221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 752, y: -301}
+  m_AnchoredPosition: {x: 670, y: -332.9}
   m_SizeDelta: {x: 175.5, y: 168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738359242
@@ -1486,6 +1486,16 @@ Prefab:
     - target: {fileID: 4726332960259562, guid: 5e887417980c08d438a469cc3acfc5f3, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 82625476856712888, guid: 5e887417980c08d438a469cc3acfc5f3,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82625476856712888, guid: 5e887417980c08d438a469cc3acfc5f3,
+        type: 2}
+      propertyPath: m_Volume
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e887417980c08d438a469cc3acfc5f3, type: 2}

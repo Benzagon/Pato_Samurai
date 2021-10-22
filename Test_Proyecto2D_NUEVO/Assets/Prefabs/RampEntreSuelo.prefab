@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4597193105204478}
   - component: {fileID: 212734423200691496}
+  - component: {fileID: 68875266426001560}
   m_Layer: 0
   m_Name: RampEntreSuelo
   m_TagString: Untagged
@@ -34,12 +35,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1165385543597548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 196.9, y: -1.378, z: 0}
-  m_LocalScale: {x: 25, y: 1.25, z: 1}
+  m_LocalPosition: {x: 645.26, y: -1.39, z: 0}
+  m_LocalScale: {x: -25.00002, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &68875266426001560
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1165385543597548}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.27692607, y: 0.29987755}
+  - {x: 0.35884982, y: 0.26033345}
 --- !u!212 &212734423200691496
 SpriteRenderer:
   m_ObjectHideFlags: 1
