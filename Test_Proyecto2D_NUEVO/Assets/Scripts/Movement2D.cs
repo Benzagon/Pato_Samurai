@@ -12,12 +12,18 @@ public class Movement2D : MonoBehaviour {
     public float moveSpeed;
     public float jumpHeight;
     public int health;
-    bool cpIsActive = false;
+
+    bool cp1IsActive = false;
+    public GameObject CP1;
+
+    bool cp2IsActive = false;
+    public GameObject CP2;
 
     Vector3 startPos;
 
     private Animator animator;
-    public Animator CPAnimator;
+    public Animator CP1Animator;
+    public Animator CP2Animator;
     
     public bool isDashing = false;
     private bool isFacingRight = true;
@@ -182,12 +188,20 @@ public class Movement2D : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (cpIsActive == false)
+        if (CP1 && cp1IsActive == false)
         {
             startPos = transform.position;
-            CPAnimator.SetTrigger("getCP");
+            CP1Animator.SetTrigger("getCP");
             health = 3;
-            cpIsActive = true;
+            cp1IsActive = true;
+        }
+
+        if (CP2 && cp2IsActive == false)
+        {
+            startPos = transform.position;
+            CP2Animator.SetTrigger("getCP");
+            health = 3;
+            cp2IsActive = true;
         }
     }
 
