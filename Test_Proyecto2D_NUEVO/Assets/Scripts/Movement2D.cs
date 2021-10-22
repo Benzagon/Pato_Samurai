@@ -12,6 +12,7 @@ public class Movement2D : MonoBehaviour {
     public float moveSpeed;
     public float jumpHeight;
     public int health;
+    bool cpIsActive = false;
 
     Vector3 startPos;
 
@@ -181,12 +182,12 @@ public class Movement2D : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bool cpIsActive = false;
-
         if (cpIsActive == false)
         {
             startPos = transform.position;
             CPAnimator.SetTrigger("getCP");
+            health = 3;
+            cpIsActive = true;
         }
     }
 
