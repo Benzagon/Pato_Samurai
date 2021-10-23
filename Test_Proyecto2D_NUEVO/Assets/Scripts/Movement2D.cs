@@ -19,6 +19,8 @@ public class Movement2D : MonoBehaviour {
     bool cp2IsActive = false;
     public GameObject CP2;
 
+    public GameObject Goal;
+
     Vector3 startPos;
 
     private Animator animator;
@@ -202,6 +204,12 @@ public class Movement2D : MonoBehaviour {
             CP2Animator.SetTrigger("getCP");
             health = 3;
             cp2IsActive = true;
+        }
+
+        if(Goal)
+        {
+            rb2d.velocity = new Vector2(0f, 0f);
+            animator.SetBool("isGrounded", true);
         }
     }
 
