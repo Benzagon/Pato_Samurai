@@ -8,7 +8,7 @@ public class SlimeMovement : MonoBehaviour {
 
     public float slimeMoveSpeed;
     public float slimeJumpHeight;
-    private float slimeScaleX;
+    private float ScaleX;
 
     private float jumpCooldown;
     public float cooldownSeconds;
@@ -33,7 +33,7 @@ public class SlimeMovement : MonoBehaviour {
         trans = GetComponent<Transform>();
 
         slimeMoveSpeed = -slimeMoveSpeed;
-        slimeScaleX = trans.localScale.x;
+        ScaleX = trans.localScale.x;
         
     }
 		
@@ -49,7 +49,7 @@ public class SlimeMovement : MonoBehaviour {
 
             rb2d.velocity = Vector2.up * slimeJumpHeight;
             rb2d.velocity = new Vector2(slimeMoveSpeed, rb2d.velocity.y);
-            transform.localScale = new Vector3(slimeScaleX, 4f, 4.5f);
+            transform.localScale = new Vector3(ScaleX, trans.localScale.y, trans.localScale.z);
 
             animator.SetBool("jumping", true);
 
@@ -97,7 +97,7 @@ public class SlimeMovement : MonoBehaviour {
     private void turnAround()
     {
         slimeMoveSpeed = -slimeMoveSpeed;
-        slimeScaleX = -slimeScaleX;
+        ScaleX = -ScaleX;
     }
     private void OnDestroy()
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour {
 
     [SerializeField] private LayerMask slimeLayerMask;
-    [SerializeField] private LayerMask spiderLayerMask;
+    [SerializeField] private LayerMask skeletonLayerMask;
 
     public float timeBtwAttack;
     public float startTimeBtwAttack;
@@ -34,10 +34,10 @@ public class PlayerAttack : MonoBehaviour {
                     enemiesToDamageSlime[i].GetComponent<SlimeMovement>().TakeDamage(damage);
                 }
 
-                Collider2D[] enemiesToDamageSpider = Physics2D.OverlapCircleAll(attackPos.position, attackRange, spiderLayerMask);
-                for (int i = 0; i < enemiesToDamageSpider.Length; i++)
+                Collider2D[] enemiesToDamageSkeleton = Physics2D.OverlapCircleAll(attackPos.position, attackRange, skeletonLayerMask);
+                for (int i = 0; i < enemiesToDamageSkeleton.Length; i++)
                 {
-                    enemiesToDamageSpider[i].GetComponent<EnemyMovement>().TakeDamage(damage);
+                    enemiesToDamageSkeleton[i].GetComponent<skeletonMovement>().TakeDamage(damage);
                 }     
 
                 timeBtwAttack = startTimeBtwAttack;

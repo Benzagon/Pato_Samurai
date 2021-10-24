@@ -39,7 +39,7 @@ public class Movement2D : MonoBehaviour {
 
     public Slider dashCooldownSlider;
     public Image dashCooldownBorder;
-    public Image dashCooldownBackground;  
+    public Image dashCooldownBackground;
 
     Quaternion defaultRot;
         
@@ -54,8 +54,7 @@ public class Movement2D : MonoBehaviour {
         defaultRot = transform.rotation;
         startPos = transform.position;
 
-        dashCooldownSlider.value = 0f;
-               
+        dashCooldownSlider.value = 0f;              
     }   
 
     void Update() {
@@ -206,10 +205,9 @@ public class Movement2D : MonoBehaviour {
             cp2IsActive = true;
         }
 
-        if(Goal)
+        if(collision.gameObject.CompareTag("Goal"))
         {
-            rb2d.velocity = new Vector2(0f, 0f);
-            animator.SetBool("isGrounded", true);
+            SceneManager.LoadScene("Level 2");         
         }
     }
 

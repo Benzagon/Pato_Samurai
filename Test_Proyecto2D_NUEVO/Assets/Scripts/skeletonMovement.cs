@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour {
+public class skeletonMovement : MonoBehaviour {
 
     public float enemyMoveSpeed;
 
@@ -69,6 +69,7 @@ public class EnemyMovement : MonoBehaviour {
     {
         waitTime = 0.5f;
         health -= damage;
+        Instantiate(PSDie, transform.position, Quaternion.identity);
     }
 
     private void OnDestroy()
