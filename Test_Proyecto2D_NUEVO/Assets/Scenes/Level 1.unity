@@ -525,7 +525,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20723931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 184, y: 32.4, z: 0}
+  m_LocalPosition: {x: -15.3, y: 6.3, z: 0}
   m_LocalScale: {x: 3.75, y: 3.75, z: 3.75}
   m_Children:
   - {fileID: 192890895}
@@ -641,6 +641,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -956,11 +960,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1125.9998
+      value: 1126
       objectReference: {fileID: 0}
     - target: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.8400006
+      value: 5.89
       objectReference: {fileID: 0}
     - target: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1002,6 +1006,12 @@ Prefab:
       propertyPath: m_Name
       value: Piso 2.0 (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 212981722623610164, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 843705bb8722ffe43ae7b186e97f7188,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
   m_IsPrefabAsset: 0
@@ -1409,6 +1419,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -1463,6 +1477,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -1516,6 +1534,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -1598,7 +1620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 63291733}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RAMPTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1663,7 +1685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 68277345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BOTTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1808,9 +1830,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 73129676}
-  m_Layer: 0
+  - component: {fileID: 73129678}
+  - component: {fileID: 73129677}
+  m_Layer: 8
   m_Name: GroundTiles
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1831,6 +1855,45 @@ Transform:
   m_Father: {fileID: 1687048794}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &73129677
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73129675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1200, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -35.420776, y: -0.26046747}
+  - {x: 269.76465, y: -0.25842142}
+--- !u!68 &73129678
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73129675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 893.92474, y: -0.2702146}
+  - {x: 654.0307, y: -0.26908723}
+  - {x: 638.6124, y: -1.0434021}
+  - {x: 637.5927, y: -1.0612499}
+  - {x: 205.14334, y: -1.0637165}
+  - {x: 187.98666, y: -0.2553072}
+  - {x: 44.786118, y: -0.27762923}
 --- !u!1001 &74599291
 Prefab:
   m_ObjectHideFlags: 0
@@ -2024,6 +2087,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -2720,41 +2787,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4977047297653800, guid: 4d1376340fd8b1b4fac2e56f6933abdc,
     type: 2}
   m_PrefabInternal: {fileID: 224140716}
---- !u!1 &120108551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-    type: 2}
-  m_PrefabInternal: {fileID: 131944049}
 --- !u!4 &120108552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
     type: 2}
   m_PrefabInternal: {fileID: 131944049}
---- !u!61 &120108553
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 120108551}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
 --- !u!1001 &121541685
 Prefab:
   m_ObjectHideFlags: 0
@@ -2863,6 +2900,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -2991,6 +3032,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -3054,6 +3099,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -3294,6 +3343,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -3540,6 +3593,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -3657,6 +3714,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -3711,6 +3772,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -3756,6 +3821,14 @@ Prefab:
     - target: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
       propertyPath: m_Name
       value: Piso 2.0 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
@@ -4417,6 +4490,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -4773,6 +4850,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -4876,6 +4957,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (141)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -5145,6 +5230,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -5374,6 +5463,36 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &256536197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+    type: 2}
+  m_PrefabInternal: {fileID: 1078826136}
+--- !u!61 &256536198
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256536197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.029763833}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1001 &262078285
 Prefab:
   m_ObjectHideFlags: 0
@@ -5424,6 +5543,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -5483,6 +5606,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (142)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -5896,6 +6023,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -5984,6 +6115,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -6111,6 +6246,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -6374,7 +6513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 307317315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TOPTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6933,38 +7072,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 212564926636745912, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 89d108c579383e74ba94cb4dcd829845,
-        type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.0499997
-      objectReference: {fileID: 0}
     - target: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
       propertyPath: m_Name
       value: Wall (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &344270560
@@ -7386,6 +7498,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -7484,6 +7600,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -7732,6 +7852,36 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &392637527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1420811106}
+--- !u!61 &392637528
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392637527}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!4 &392792629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274,
@@ -7921,6 +8071,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -7974,6 +8128,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -8293,7 +8451,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.84
+      value: 5.89
       objectReference: {fileID: 0}
     - target: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8335,6 +8493,12 @@ Prefab:
       propertyPath: m_Name
       value: Piso 2.0 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 212981722623610164, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 843705bb8722ffe43ae7b186e97f7188,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
   m_IsPrefabAsset: 0
@@ -8525,6 +8689,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -8692,6 +8860,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -8745,6 +8917,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (146)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -8868,7 +9044,8 @@ Prefab:
       propertyPath: m_Points.Array.data[3].y
       value: -0.33809188
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 68760084881332430, guid: d0b2e27ee4c81c34ba0762b94fe127b6, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d0b2e27ee4c81c34ba0762b94fe127b6, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &445192977 stripped
@@ -9276,6 +9453,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -9392,6 +9573,36 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &476993312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783401137}
+--- !u!61 &476993313
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 476993312}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.07158805}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.4968239}
+  m_EdgeRadius: 0
 --- !u!1001 &479161604
 Prefab:
   m_ObjectHideFlags: 0
@@ -10042,6 +10253,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -11009,6 +11224,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -11178,6 +11397,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -11286,6 +11509,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -11768,41 +11995,11 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &607597386 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1750137131}
 --- !u!4 &607597387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
     type: 2}
   m_PrefabInternal: {fileID: 1750137131}
---- !u!61 &607597388
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 607597386}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
 --- !u!1001 &607981011
 Prefab:
   m_ObjectHideFlags: 0
@@ -11861,6 +12058,36 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3430720f841744aa36234419644e8a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &608426407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1271190912}
+--- !u!61 &608426408
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608426407}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!1 &608457167 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
@@ -12226,6 +12453,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -12279,6 +12510,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -12721,6 +12956,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -13015,6 +13254,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -13547,6 +13790,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (131)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -14225,6 +14472,18 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 4977047297653800, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977047297653800, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -14454,6 +14713,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -14757,6 +15020,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -15103,6 +15370,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -15582,7 +15853,12 @@ Prefab:
       propertyPath: m_Name
       value: RampEntreSuelo (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1165385543597548, guid: 7ad37f6572136fb4cb2cf4f0d0f0d0b1, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 68875266426001560, guid: 7ad37f6572136fb4cb2cf4f0d0f0d0b1, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 7ad37f6572136fb4cb2cf4f0d0f0d0b1, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &780306757 stripped
@@ -15744,7 +16020,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 68760084881332430, guid: d0b2e27ee4c81c34ba0762b94fe127b6, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d0b2e27ee4c81c34ba0762b94fe127b6, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &789927448 stripped
@@ -16059,6 +16336,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -16253,6 +16534,36 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &815828887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+    type: 2}
+  m_PrefabInternal: {fileID: 1288442084}
+--- !u!61 &815828888
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815828887}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.0598588}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.5202824}
+  m_EdgeRadius: 0
 --- !u!1001 &817794751
 Prefab:
   m_ObjectHideFlags: 0
@@ -16326,6 +16637,36 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &820125962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+    type: 2}
+  m_PrefabInternal: {fileID: 1376893770}
+--- !u!61 &820125963
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 820125962}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.032243982}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1 &824211068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
@@ -16411,6 +16752,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -16538,6 +16883,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -16705,6 +17054,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -16974,6 +17327,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -17078,6 +17435,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (143)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -17086,41 +17447,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
     type: 2}
   m_PrefabInternal: {fileID: 37554484}
---- !u!1 &868514055 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-    type: 2}
-  m_PrefabInternal: {fileID: 839203403}
 --- !u!4 &868514056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
     type: 2}
   m_PrefabInternal: {fileID: 839203403}
---- !u!61 &868514057
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 868514055}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
 --- !u!4 &868850801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4977047297653800, guid: 4d1376340fd8b1b4fac2e56f6933abdc,
@@ -17181,6 +17512,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -18457,38 +18792,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
-    - target: {fileID: 212564926636745912, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 89d108c579383e74ba94cb4dcd829845,
-        type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.0499997
-      objectReference: {fileID: 0}
     - target: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
       propertyPath: m_Name
       value: Wall (32)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &958780394 stripped
@@ -18887,6 +19195,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -19383,6 +19695,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -19736,6 +20052,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -19874,6 +20194,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -20041,6 +20365,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (142)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -20563,6 +20891,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -20884,6 +21216,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -20937,6 +21273,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -21173,6 +21513,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -21231,6 +21575,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -22072,6 +22420,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -22816,6 +23168,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -23000,6 +23356,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -23277,38 +23637,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 212564926636745912, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 89d108c579383e74ba94cb4dcd829845,
-        type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.0499997
-      objectReference: {fileID: 0}
     - target: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
       propertyPath: m_Name
       value: Wall (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1189320198 stripped
@@ -23500,6 +23833,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -23651,6 +23988,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -24343,6 +24684,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!1 &1287272909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+    type: 2}
+  m_PrefabInternal: {fileID: 1598412746}
+--- !u!61 &1287272910
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1287272909}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.03202724}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1001 &1288442084
 Prefab:
   m_ObjectHideFlags: 0
@@ -24611,6 +24982,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -24783,6 +25158,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -24866,6 +25245,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -25290,6 +25673,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -25349,6 +25736,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -25398,6 +25789,10 @@ Prefab:
     - target: {fileID: 4977047297653800, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -25457,6 +25852,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (145)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -26314,6 +26713,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274,
     type: 2}
   m_PrefabInternal: {fileID: 1937656256}
+--- !u!1 &1364471141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+    type: 2}
+  m_PrefabInternal: {fileID: 1958820061}
+--- !u!61 &1364471142
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1364471141}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.03202738}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1001 &1365752124
 Prefab:
   m_ObjectHideFlags: 0
@@ -26442,6 +26871,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -27535,7 +27968,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1105803883429200, guid: a83a66e714d4deb479ee92ac3ca9661d, type: 2}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a83a66e714d4deb479ee92ac3ca9661d, type: 2}
@@ -27651,6 +28084,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -27871,41 +28308,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae84a0adba1bf5843aa6e0ceebabf274, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1437078738 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1187385740}
 --- !u!4 &1437078739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
     type: 2}
   m_PrefabInternal: {fileID: 1187385740}
---- !u!61 &1437078740
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1437078738}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
 --- !u!1001 &1437932843
 Prefab:
   m_ObjectHideFlags: 0
@@ -27977,9 +28384,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1439518021}
+  - component: {fileID: 1439518022}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28241,6 +28649,31 @@ Transform:
   m_Father: {fileID: 1687048794}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1439518022
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439518020}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 40.435493, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.184933, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1450478881
 Prefab:
   m_ObjectHideFlags: 0
@@ -28632,6 +29065,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -28685,6 +29122,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (144)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -29198,6 +29639,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -29444,6 +29889,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -29502,6 +29951,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -29584,41 +30037,11 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1533752441 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-    type: 2}
-  m_PrefabInternal: {fileID: 2027967024}
 --- !u!4 &1533752442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
     type: 2}
   m_PrefabInternal: {fileID: 2027967024}
---- !u!61 &1533752443
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1533752441}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
 --- !u!4 &1536937178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
@@ -30670,6 +31093,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (130)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -31009,6 +31436,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -31396,6 +31827,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -31731,6 +32166,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -32976,6 +33415,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -33376,41 +33819,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
---- !u!1 &1699744606 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-    type: 2}
-  m_PrefabInternal: {fileID: 958281726}
 --- !u!4 &1699744607 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
     type: 2}
   m_PrefabInternal: {fileID: 958281726}
---- !u!61 &1699744608
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1699744606}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
 --- !u!4 &1700723361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
@@ -33902,6 +34315,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -34033,6 +34450,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -34337,6 +34758,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -34395,6 +34820,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -34511,38 +34940,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 212564926636745912, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 89d108c579383e74ba94cb4dcd829845,
-        type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.0499997
-      objectReference: {fileID: 0}
     - target: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
       propertyPath: m_Name
       value: Wall (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1750635530
@@ -35183,6 +35585,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -35372,6 +35778,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -35704,6 +36114,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -35804,6 +36218,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -36014,6 +36432,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -36267,6 +36689,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274,
     type: 2}
   m_PrefabInternal: {fileID: 1373510890}
+--- !u!1 &1855594943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+    type: 2}
+  m_PrefabInternal: {fileID: 97212936}
+--- !u!61 &1855594944
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855594943}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.032027245}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1001 &1855867505
 Prefab:
   m_ObjectHideFlags: 0
@@ -37075,6 +37527,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -37554,6 +38010,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -37609,7 +38069,12 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 25.00002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1165385543597548, guid: 7ad37f6572136fb4cb2cf4f0d0f0d0b1, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 68875266426001560, guid: 7ad37f6572136fb4cb2cf4f0d0f0d0b1, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 7ad37f6572136fb4cb2cf4f0d0f0d0b1, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1921974386 stripped
@@ -37702,6 +38167,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -37903,6 +38372,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -37984,6 +38457,36 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1936923120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+    type: 2}
+  m_PrefabInternal: {fileID: 424785006}
+--- !u!61 &1936923121
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936923120}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.72}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.72}
+  m_EdgeRadius: 0
 --- !u!1001 &1937656256
 Prefab:
   m_ObjectHideFlags: 0
@@ -38416,6 +38919,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4824148841576318, guid: ae84a0adba1bf5843aa6e0ceebabf274,
     type: 2}
   m_PrefabInternal: {fileID: 2092155835}
+--- !u!1 &1963548439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622129438152392, guid: ae84a0adba1bf5843aa6e0ceebabf274,
+    type: 2}
+  m_PrefabInternal: {fileID: 1660437773}
+--- !u!61 &1963548440
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1963548439}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.03202724}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1001 &1971330044
 Prefab:
   m_ObjectHideFlags: 0
@@ -38948,6 +39481,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -39168,6 +39705,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -39221,6 +39762,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -39332,38 +39877,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 212564926636745912, guid: 8a44bbfb3cc76b84a9ed81df94901ccd,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 89d108c579383e74ba94cb4dcd829845,
-        type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526879008279928, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.0499997
-      objectReference: {fileID: 0}
     - target: {fileID: 1259774311917098, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a44bbfb3cc76b84a9ed81df94901ccd, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2028042977
@@ -40182,6 +40700,10 @@ Prefab:
       propertyPath: m_Name
       value: EntreSuelo (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -40375,6 +40897,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 4939398183186970, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939398183186970, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
   m_IsPrefabAsset: 0
@@ -40438,6 +40972,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -40674,6 +41212,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -40727,6 +41269,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (147)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -41009,6 +41555,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -41400,6 +41950,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -41494,6 +42048,10 @@ Prefab:
       propertyPath: m_Name
       value: Subsuelo (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
   m_IsPrefabAsset: 0
@@ -41552,6 +42110,10 @@ Prefab:
     - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
       propertyPath: m_Name
       value: EntreSuelo (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127902646612050, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19023987424f144bbaffcefe40d0f15, type: 2}
@@ -41669,6 +42231,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
@@ -41801,6 +42367,10 @@ Prefab:
     - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
       propertyPath: m_Name
       value: Subsuelo (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433615716152854, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1376340fd8b1b4fac2e56f6933abdc, type: 2}

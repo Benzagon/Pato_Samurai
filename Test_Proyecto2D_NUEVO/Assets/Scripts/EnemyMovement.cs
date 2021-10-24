@@ -24,14 +24,12 @@ public class EnemyMovement : MonoBehaviour {
     {
         if (moveLeft == true)
         {
-            rb2d.velocity = new Vector2(-enemyMoveSpeed, rb2d.velocity.y);
-            transform.localScale = new Vector3(4f, 4f, 4.5f);
+            moveLeftFunc();
         }
 
         else if (moveLeft == false)
         {
-            rb2d.velocity = new Vector2(enemyMoveSpeed, rb2d.velocity.y);
-            transform.localScale = new Vector3(-4f, 4f, 4.5f);
+            moveRightFunc();
         }
 
         if (health <= 0)
@@ -48,6 +46,18 @@ public class EnemyMovement : MonoBehaviour {
                 waitTime -= Time.deltaTime;
             }
         }
+    }
+
+    private void moveLeftFunc()
+    {
+        rb2d.velocity = new Vector2(-enemyMoveSpeed, rb2d.velocity.y);
+        transform.localScale = new Vector3(4f, 4f, 4.5f);
+    }
+
+    private void moveRightFunc()
+    {
+        rb2d.velocity = new Vector2(enemyMoveSpeed, rb2d.velocity.y);
+        transform.localScale = new Vector3(-4f, 4f, 4.5f);
     }
 
     public void TakeDamage(int damage)
