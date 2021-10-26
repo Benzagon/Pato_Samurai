@@ -41,7 +41,14 @@ public class Movement2D : MonoBehaviour {
     public Image dashCooldownBorder;
     public Image dashCooldownBackground;
 
+    public Image healthBar;
+    public Sprite fullHearts;
+    public Sprite halfHearts;
+    public Sprite lastHeart;
+    
+
     Quaternion defaultRot;
+    Image healthImage;
         
     Rigidbody2D rb2d;
     BoxCollider2D bc2d;
@@ -50,11 +57,14 @@ public class Movement2D : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         bc2d = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        healthImage = healthBar.GetComponent<Image>();
         
         defaultRot = transform.rotation;
         startPos = transform.position;
 
-        dashCooldownSlider.value = 0f;              
+        dashCooldownSlider.value = 0f;
+
+        healthImage.sprite = fullHearts;
     }   
 
     void Update() {
@@ -176,9 +186,21 @@ public class Movement2D : MonoBehaviour {
             }
             else
             {
+
                 transform.position = startPos;
                 animator.SetBool("walking", false);
+
+                if (health == 2)
+                {
+                    healthImage.sprite = halfHearts;
+                }
+                else if (health == 1)
+                {
+                    healthImage.sprite = lastHeart;
+                }
+              
             }
+
         }
 
         else if (collision.collider.tag == "EnemyHead")
@@ -195,6 +217,7 @@ public class Movement2D : MonoBehaviour {
             CP1Animator.SetTrigger("getCP");
             health = 3;
             cp1IsActive = true;
+            healthImage.sprite = fullHearts;
         }
 
         if (CP2 && cp2IsActive == false)
@@ -203,6 +226,7 @@ public class Movement2D : MonoBehaviour {
             CP2Animator.SetTrigger("getCP");
             health = 3;
             cp2IsActive = true;
+            healthBar.sprite = fullHearts;
         }
 
         if(collision.gameObject.CompareTag("Goal"))
