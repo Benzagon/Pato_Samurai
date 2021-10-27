@@ -199,8 +199,9 @@ GameObject:
   m_Component:
   - component: {fileID: 133902531}
   - component: {fileID: 133902532}
+  - component: {fileID: 133902533}
   m_Layer: 5
-  m_Name: RestartMenu
+  m_Name: WinMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,6 +237,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60ffa6b2c387a0545a3fb31bd173e497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &133902533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133902530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167218de32db75f4ab36b4829e35d697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &383252207
@@ -379,7 +391,7 @@ GameObject:
   - component: {fileID: 738965792}
   - component: {fileID: 738965791}
   m_Layer: 5
-  m_Name: YOU DIED
+  m_Name: YouWinTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,7 +479,7 @@ GameObject:
   - component: {fileID: 775080808}
   - component: {fileID: 775080807}
   m_Layer: 5
-  m_Name: RestartBtn
+  m_Name: NxtLvlBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -488,8 +500,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 136.3, y: -43.306}
-  m_SizeDelta: {x: 186.8, y: 184.19}
+  m_AnchoredPosition: {x: 148.75998, y: -42.699997}
+  m_SizeDelta: {x: 297.52, y: 293.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &775080807
 MonoBehaviour:
@@ -530,8 +542,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133902532}
-        m_MethodName: RestartGame
+      - m_Target: {fileID: 133902533}
+        m_MethodName: NxtLvl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -562,7 +574,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cb3279267877ec24dba741bb3f27a2c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76245b2077f93d248b7199bea386f78c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -671,8 +683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: 72}
-  m_SizeDelta: {x: 2535.3, y: 1195.3}
+  m_AnchoredPosition: {x: -0.000015259, y: 72}
+  m_SizeDelta: {x: 2095.7, y: 1195.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138949034
 MonoBehaviour:
@@ -693,7 +705,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 986e05fdb7316564a9048bef36ee82dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb6fd8cc26192aa46ad41b2f12654ccc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

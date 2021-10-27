@@ -79,6 +79,9 @@ public class Movement2D : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftShift) && moveSpeed != 0 && dashCooldownTimer <= 0)
             Dash();
 
+        if (Input.GetKey(KeyCode.R))
+            SceneManager.LoadScene("Menu");
+
         if (Input.GetKey(KeyCode.D))
         {
             rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
@@ -231,7 +234,7 @@ public class Movement2D : MonoBehaviour {
 
         if(collision.gameObject.CompareTag("Goal"))
         {
-            SceneManager.LoadScene("Level 2");         
+            SceneManager.LoadScene("WinScreen");         
         }
     }
 

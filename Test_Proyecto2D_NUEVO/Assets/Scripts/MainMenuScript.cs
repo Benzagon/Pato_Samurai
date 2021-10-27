@@ -16,4 +16,9 @@ public class MainMenuScript : MonoBehaviour {
         Application.Quit();
     }
 
+    public void NxtLvl()
+    {
+        SceneManager.LoadScene("Level 2");
+    }
+
 }
