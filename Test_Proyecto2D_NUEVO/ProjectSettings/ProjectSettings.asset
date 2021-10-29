@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: TIC2021
   productName: PatoSamurai
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -261,7 +261,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 34ed73aecd06fe1438209cc221dd3fee, type: 3}
+      m_Icon: {fileID: 2800000, guid: 5ab26f8a70a3ead4eb2ef14036952417, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

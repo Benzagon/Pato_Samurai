@@ -80,6 +80,12 @@ public class Movement2D : MonoBehaviour {
             Dash();
 
         if (Input.GetKey(KeyCode.R))
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
             SceneManager.LoadScene("Menu");
 
         if (Input.GetKey(KeyCode.D))
