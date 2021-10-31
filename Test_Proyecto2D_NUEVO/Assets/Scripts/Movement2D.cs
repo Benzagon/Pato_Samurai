@@ -18,9 +18,7 @@ public class Movement2D : MonoBehaviour {
 
     bool cp2IsActive = false;
     public GameObject CP2;
-
-    public GameObject Goal;
-
+    
     Vector3 startPos;
 
     private Animator animator;
@@ -240,7 +238,7 @@ public class Movement2D : MonoBehaviour {
 
         if(collision.gameObject.CompareTag("Goal"))
         {
-            SceneManager.LoadScene("WinScreen");         
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);         
         }
     }
 

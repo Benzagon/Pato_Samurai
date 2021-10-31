@@ -15,12 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1.unity
     guid: 86dffa128e68bf44aa10e55da7bbfe2c
   - enabled: 1
-    path: Assets/Scenes/DeathScreen.unity
-    guid: 09819fe5756e9cb47bdb8abe1b2da825
+    path: Assets/Scenes/WinScreen.unity
+    guid: 7c8e3f804167fc241ab46afc10c6f5a5
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 1d3ec69c629b59943909afadc2771108
   - enabled: 1
-    path: Assets/Scenes/WinScreen.unity
-    guid: 7c8e3f804167fc241ab46afc10c6f5a5
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 841a0bfa657f38246aaf8142d8d00511
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: 09819fe5756e9cb47bdb8abe1b2da825
   m_configObjects: {}
