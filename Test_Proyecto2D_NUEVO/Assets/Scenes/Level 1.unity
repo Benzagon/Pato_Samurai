@@ -438,8 +438,6 @@ MonoBehaviour:
   health: 3
   CP1: {fileID: 2032849220}
   CP2: {fileID: 0}
-  goalLvl2: {fileID: 0}
-  goalLvl1: {fileID: 1936923120}
   CP1Animator: {fileID: 1531093904}
   CP2Animator: {fileID: 0}
   isDashing: 0

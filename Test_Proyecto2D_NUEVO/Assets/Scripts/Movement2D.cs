@@ -86,6 +86,9 @@ public class Movement2D : MonoBehaviour {
         if (Input.GetKey(KeyCode.Escape))
             SceneManager.LoadScene("Menu");
 
+        if (Input.GetKey(KeyCode.P))
+            SceneManager.LoadScene("Level 2");
+
         if (Input.GetKey(KeyCode.D))
         {
             rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
