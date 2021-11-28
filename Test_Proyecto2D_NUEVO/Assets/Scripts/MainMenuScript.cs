@@ -21,4 +21,8 @@ public class MainMenuScript : MonoBehaviour {
         SceneManager.LoadScene("Level 2");
     }
 
+    public void startTut()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 }
