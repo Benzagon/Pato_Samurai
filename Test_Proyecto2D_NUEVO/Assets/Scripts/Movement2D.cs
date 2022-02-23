@@ -20,6 +20,8 @@ public class Movement2D : MonoBehaviour {
     public GameObject CP2;
     
     Vector3 startPos;
+    private Scene activeScene;
+    public static int levelCount;
 
     private Animator animator;
     public Animator CP1Animator;
@@ -56,6 +58,7 @@ public class Movement2D : MonoBehaviour {
         bc2d = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         healthImage = healthBar.GetComponent<Image>();
+        activeScene = SceneManager.GetActiveScene();
         
         defaultRot = transform.rotation;
         startPos = transform.position;
@@ -63,6 +66,19 @@ public class Movement2D : MonoBehaviour {
         dashCooldownSlider.value = 0f;
 
         healthImage.sprite = fullHearts;
+
+        if(activeScene == SceneManager.GetSceneByName("Level 1"))
+        {
+            levelCount = 1;
+        }
+        else if(activeScene == SceneManager.GetSceneByName("Level 2"))
+        {
+            levelCount = 2;
+        }
+        else
+        {
+            levelCount = 0;
+        }
     }   
 
     void Update() {

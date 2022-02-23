@@ -5,9 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class DeathScreenScript : MonoBehaviour {
 
+    private int currentLevel;
+
 	public void RestartGame()
     {
-        SceneManager.LoadScene("Level 1");
+        currentLevel = Movement2D.levelCount;
+
+        if(currentLevel > 0)
+        { 
+            SceneManager.LoadScene("Level "+ currentLevel);
+        }
+        else
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
     }
 
     public void ReturnToHome()
